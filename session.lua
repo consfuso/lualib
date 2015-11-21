@@ -1,6 +1,6 @@
 local session = {}
 
-local db = require('byronmccollum/webscript.io-modules/db2.lua')
+local db = require('byronmccollum/webscript.io-modules/db.lua')
 local cookie = require('byronmccollum/webscript.io-modules/cookie.lua')
 
 local session_table = {}
