@@ -32,8 +32,14 @@ end
 
 function db.delete(database, id)
 	local database_table = read(database)
-	database_table[id] = nil
-	write(database, database_table)
+	if id then
+		database_table[id] = nil
+		write(database, database_table)
+	else
+		for k, v in pairs(database_table) do
+			table.remove(database_table,k)
+		end
+	end
 end
 
 function db.select(database, id)
