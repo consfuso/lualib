@@ -1,7 +1,7 @@
 local session = {}
 
-local db = require('randag/lua-modules/db.lua')
-local cookie = require('randag/lua-modules/cookie.lua')
+local db = require('consfuso/lua-modules/db.lua')
+local cookie = require('consfuso/lua-modules/cookie.lua')
 
 local session_table = {}
 
