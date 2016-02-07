@@ -1,14 +1,14 @@
 local db = {}
 
 local function connect(database)
-	lease.acquire('database:' .. database)
+	lease.acquire(database)
 	if storage[database] == nil then
 		storage[database] = '[]'
 	end
 end
 
 local function disconnect(database)
-	lease.release('database:' .. database)
+	lease.release(database)
 end
 
 local function read(database)
