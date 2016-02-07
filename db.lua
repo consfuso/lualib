@@ -47,17 +47,17 @@ function db.select(database, id)
 	if id then
 		local record = database_table[id] or false
 		if record then
-			record['id'] = id
+			return record
+			-- record['id'] = id
 			-- record['json'] = json.stringify(record)
 		end
-		return record
 	else
 		local records = {}
 		for k, v in pairs(database_table) do
-			local record = v
-			record['id'] = k
+			-- local record = v
+			-- record['id'] = k
 			-- record['json'] = json.stringify(record)
-			table.insert(records, record)
+			table.insert(records, {k = v})
 		end
 		return records
 	end
