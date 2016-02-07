@@ -1,7 +1,7 @@
 local session = {}
 
-local db = require('consfuso/lua-modules/db.lua')
-local cookie = require('consfuso/lua-modules/cookie.lua')
+local db = require('consfuso/lualib/db.lua')
+local cookie = require('consfuso/lualib/cookie.lua')
 
 local session_table = {}
 
